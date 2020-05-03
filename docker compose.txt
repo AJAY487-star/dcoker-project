@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+        ajaydatabase:
+                image: mysql:latest
+                volumes:
+                        - ajaydb_storage_new:/var/lib/mysql
+                restart: always
+                environment:
+                        MYSQL_ROOT_PASSWORD: ajayred
+                        MYSQL_USER: darkest
+                        MYSQL_PASSWORD: soulajay
+                        MYSQL_DATABASE: ajaydb
+
+        joomlacms:
+                image: joomla:latest
+                restart: always
+                depends_on:
+                        - ajaydatabase
+                ports:
+                        - 1234:80
+                environment:
+                        JOOMLA_DB_HOST: ajaydatabase:1245
+                        JOOMLA_DB_USER: darkest
+                        JOOMLA_DB_PASSWORD: darkestdoul
+                        JOOMLA_DB_NAME: ajaydb
+                volumes:
+                        - joom_storage_new:/var/www/html
+volumes:
+        ajaydb_storage_new:
+        joom_storage_new:
