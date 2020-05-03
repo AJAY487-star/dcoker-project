@@ -22,7 +22,7 @@ services:
                 environment:
                         JOOMLA_DB_HOST: ajaydatabase:1245
                         JOOMLA_DB_USER: darkest
-                        JOOMLA_DB_PASSWORD: darkestdoul
+                        JOOMLA_DB_PASSWORD: soulajay
                         JOOMLA_DB_NAME: ajaydb
                 volumes:
                         - joom_storage_new:/var/www/html
