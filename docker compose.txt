@@ -2,6 +2,8 @@ I have created a webapp on the top of joomla.
 For creating this i have downloaded two images joomla and mysql and i have also downloaded docker compose tool. After that i have launched joomla container and mysql container inisde docker compose.yml file with attaching volume to joomla container and mysql container..
 After doing all the above steps my infrastructure is ready. Now by just using one single command i.e docker-compose up my webapp is launched..
 
+link of my linkedin post https://www.linkedin.com/posts/ajay-kumar-592b471a6_iiecabrrise-righteducation-docker-activity-6662982121604419584-Z8we
+
 code for above setup...
 
 version:  '3'
